@@ -41,7 +41,7 @@ public class TwilioBot {
             mediaURIs.append(" ");
         }
         System.out.println("[M->MMS] " + toSend + "\n" + "Images: " + mediaURIs.toString());
-        Message.creator(recvNumber, sendNumber, message).setMediaUrl(image).create();
+        Message.creator(recvNumber, sendNumber, toSend).setMediaUrl(image).create();
     }
 
     public static void sendMessageToDiscord(String msg) {
